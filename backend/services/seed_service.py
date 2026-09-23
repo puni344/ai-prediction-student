@@ -18,14 +18,15 @@ def seed_departments_and_admin(db: Session) -> None:
     # 1. Create tables if they don't exist
     Base.metadata.create_all(bind=engine)
 
-    # 2. Check if student_profiles.department_id column exists; if not, add it
-    with engine.connect() as conn:
-        res = conn.execute(text("PRAGMA table_info(student_profiles);"))
-        col_names = [row[1] for row in res.fetchall()]
-        if "department_id" not in col_names:
-            conn.execute(text("ALTER TABLE student_profiles ADD COLUMN department_id INTEGER REFERENCES departments(id);"))
-            conn.commit()
-            logger.info("Added department_id column to student_profiles.")
+    # 2. Check if student_profiles.department_id column exists; if not, add it (SQLite backward compatibility only)
+    if engine.dialect.name == "sqlite":
+        with engine.connect() as conn:
+            res = conn.execute(text("PRAGMA table_info(student_profiles);"))
+            col_names = [row[1] for row in res.fetchall()]
+            if "department_id" not in col_names:
+                conn.execute(text("ALTER TABLE student_profiles ADD COLUMN department_id INTEGER REFERENCES departments(id);"))
+                conn.commit()
+                logger.info("Added department_id column to student_profiles.")
 
     # 3. Seed 27 canonical departments
     dept_map = {}

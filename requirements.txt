@@ -1,3 +1,4 @@
+# Core ML & Data Science
 pandas>=2.2.2
 numpy>=1.26.4
 matplotlib>=3.8.4
@@ -8,7 +9,30 @@ joblib>=1.4.2
 streamlit>=1.35.0
 scipy>=1.13.1
 xgboost>=2.0.3
-nbformat>=5.10.4
-jupyter>=1.0.0
 catboost>=1.2.5
 shap>=0.45.0
+nbformat>=5.10.4
+jupyter>=1.0.0
+
+# Backend Web API & Production Server
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.1
+
+# Database & PostgreSQL Driver
+sqlalchemy>=2.0.30
+psycopg2-binary>=2.9.9
+
+# Security & Authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.0.1
+
+# HTTP Clients & External Integrations
+requests>=2.32.0
+httpx>=0.27.0
+openai>=1.30.0
+google-auth>=2.30.0
+google-api-python-client>=2.130.0

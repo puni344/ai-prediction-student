@@ -79,10 +79,14 @@ def verify_turnstile_token(
                 "message": "Verification token has already been used. Please verify again.",
             }
 
-    # 2. Mock / Testing mode handling
+    # 2. Mock / Testing mode handling (strictly disabled in production)
+    is_prod = getattr(settings, "APP_ENV", "development").lower() == "production"
     is_mock = (
-        getattr(settings, "CAPTCHA_PROVIDER", "turnstile").lower() in ("mock", "development")
-        or token.startswith("mock-turnstile-")
+        not is_prod
+        and (
+            getattr(settings, "CAPTCHA_PROVIDER", "turnstile").lower() in ("mock", "development")
+            or token.startswith("mock-turnstile-")
+        )
     )
 
     if is_mock:

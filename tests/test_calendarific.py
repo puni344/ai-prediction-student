@@ -184,6 +184,7 @@ class TestAcademicCalendarHierarchy:
             created_temp_student = False
             if not student_user:
                 from backend.security import get_password_hash
+                from backend.models.profile import StudentProfile
                 student_user = User(
                     email="temp_cal_student@institution.edu",
                     full_name="Temp Cal Student",
@@ -193,6 +194,13 @@ class TestAcademicCalendarHierarchy:
                     is_email_verified=True,
                 )
                 db.add(student_user)
+                db.flush()
+                student_profile = StudentProfile(
+                    user_id=student_user.id,
+                    roll_number="TEMP-001",
+                    academic_year=2,
+                )
+                db.add(student_profile)
                 db.commit()
                 db.refresh(student_user)
                 created_temp_student = True
@@ -209,6 +217,8 @@ class TestAcademicCalendarHierarchy:
             assert "institution-wide holiday" in put_res.json()["detail"]
         finally:
             if created_temp_student:
+                from backend.models.profile import StudentProfile
+                db.query(StudentProfile).filter(StudentProfile.user_id == student_user.id).delete()
                 db.query(User).filter(User.email == "temp_cal_student@institution.edu").delete()
             db.query(AdminCalendarOverride).filter(AdminCalendarOverride.date == "2026-09-25").delete()
             db.commit()
