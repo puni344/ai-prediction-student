@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     AI_API_KEY: str | None = None
     AI_TEMPERATURE: float = 0.3
     APP_ENV: str = "development"
+
     # Email / SMTP Settings
     EMAIL_PROVIDER: str = "smtp"
     SMTP_HOST: str = "smtp.gmail.com"
@@ -32,12 +33,13 @@ class Settings(BaseSettings):
     GOOGLE_CLIENT_ID: str | None = None
 
     # CAPTCHA / Cloudflare Turnstile Settings
+    ALLOWED_HOST: str | None = None
     CAPTCHA_PROVIDER: str = "turnstile"
     CAPTCHA_SITE_KEY: str | None = None
     CAPTCHA_SECRET_KEY: str | None = None
     TURNSTILE_SITE_KEY: str | None = None
     TURNSTILE_SECRET_KEY: str | None = None
-    TURNSTILE_VERIFY_URL: str = "https://challenges.cloudflare.com/turnstile/v0/siteverify" 
+    TURNSTILE_VERIFY_URL: str = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
 
     # OTP Policy Settings
     OTP_EXPIRY_SECONDS: int = 300
