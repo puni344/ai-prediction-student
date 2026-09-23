@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     SMTP_USE_TLS: bool = True
     EMAIL_FROM_NAME: str = "Smart Study Reminder"
     EMAIL_FROM_ADDRESS: str = "smartstudyreminder.ai@gmail.com"
-
+    BREVO_API_KEY: str | None = None
     # Google Sign-In Settings
     GOOGLE_CLIENT_ID: str | None = None
 
