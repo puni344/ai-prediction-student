@@ -1,0 +1,8 @@
+Model,CV_RMSE,CV_RMSE_Std,CV_MAE,CV_R2
+Linear Regression,10.562,0.9589,7.6258,0.7811
+Decision Tree Regressor,12.3966,1.5327,7.3715,0.6805
+Random Forest Regressor,8.7853,0.7919,5.7101,0.847
+Gradient Boosting Regressor,9.4605,0.5383,6.2825,0.8246
+XGBoost Regressor,9.2836,0.3424,6.2109,0.8298
+CatBoost Regressor,8.8962,0.8574,6.0597,0.8429
+Tuned Random Forest Regressor,8.5892,0.0,0.0,0.0

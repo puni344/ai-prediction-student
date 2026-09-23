@@ -1,0 +1,8 @@
+Model,MAE,MSE,RMSE,R2
+Linear Regression,7.4967,122.4278,11.0647,0.7622
+Decision Tree Regressor,6.1392,110.443,10.5092,0.7855
+Random Forest Regressor,5.4359,61.7454,7.8578,0.8801
+Gradient Boosting Regressor,5.6486,63.0371,7.9396,0.8776
+XGBoost Regressor,5.9499,66.3776,8.1472,0.8711
+CatBoost Regressor,5.6474,70.8043,8.4145,0.8625
+Tuned Random Forest Regressor,5.436,63.4877,7.9679,0.8767

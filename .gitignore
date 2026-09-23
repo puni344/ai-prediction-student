@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.codex
+.agents
+
+# Local config & secrets (STRICT - DO NOT COMMIT)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+# Local databases (STRICT - DO NOT COMMIT)
+*.db
+*.sqlite
+*.sqlite3
+student_performance.db
+test_*.db
+
+# Frontend build & dependencies
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+
+# Data and generated artifacts
+data/raw/*.zip
+data/raw/*.csv
+data/processed/*.csv
+reports/figures/*.png
+reports/figures/*.html
+
+# Keep folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+!screenshots/.gitkeep
+!reports/figures/.gitkeep
+
+# Model files required for deployment
+!models/regression.pkl
+!models/classifier.pkl
+!models/metrics.json
+!models/catboost_classifier.pkl
+!models/catboost_regressor.pkl
+!models/rf_classifier.pkl
+!models/rf_regressor.pkl
+!models/xgb_classifier.pkl
+!models/xgb_regressor.pkl
+!models/encoders_scaler.pkl
+!models/preprocessor.pkl
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Catboost and scratch logs
+catboost_info/
+*.tsv
+scripts/*.txt

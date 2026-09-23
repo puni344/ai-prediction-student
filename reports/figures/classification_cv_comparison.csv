@@ -1,0 +1,9 @@
+Model,CV_F1,CV_F1_Std,CV_Accuracy,CV_Precision,CV_Recall
+Logistic Regression,0.9542,0.0119,0.9241,0.9439,0.9654
+Decision Tree Classifier,0.9241,0.0281,0.8765,0.9299,0.9192
+Random Forest Classifier,0.9562,0.0196,0.9271,0.9483,0.9654
+SVM,0.9382,0.006,0.8955,0.9183,0.9615
+Gradient Boosting Classifier,0.9502,0.0191,0.9177,0.9435,0.9577
+XGBoost Classifier,0.9523,0.014,0.9208,0.9435,0.9615
+CatBoost Classifier,0.9501,0.0118,0.9177,0.9469,0.9538
+Tuned Random Forest Classifier,0.9604,0.0,0.0,0.0,0.0

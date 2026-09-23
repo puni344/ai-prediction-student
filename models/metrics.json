@@ -1,0 +1,299 @@
+{
+  "classification_best_params": {
+    "model__class_weight": null,
+    "model__max_depth": 4,
+    "model__max_features": "log2",
+    "model__min_samples_leaf": 2,
+    "model__min_samples_split": 2,
+    "model__n_estimators": 400
+  },
+  "classification_cv_comparison": [
+    {
+      "CV_Accuracy": 0.9241,
+      "CV_F1": 0.9542,
+      "CV_F1_Std": 0.0119,
+      "CV_Precision": 0.9439,
+      "CV_Recall": 0.9654,
+      "Model": "Logistic Regression"
+    },
+    {
+      "CV_Accuracy": 0.8765,
+      "CV_F1": 0.9241,
+      "CV_F1_Std": 0.0281,
+      "CV_Precision": 0.9299,
+      "CV_Recall": 0.9192,
+      "Model": "Decision Tree Classifier"
+    },
+    {
+      "CV_Accuracy": 0.9271,
+      "CV_F1": 0.9562,
+      "CV_F1_Std": 0.0196,
+      "CV_Precision": 0.9483,
+      "CV_Recall": 0.9654,
+      "Model": "Random Forest Classifier"
+    },
+    {
+      "CV_Accuracy": 0.8955,
+      "CV_F1": 0.9382,
+      "CV_F1_Std": 0.006,
+      "CV_Precision": 0.9183,
+      "CV_Recall": 0.9615,
+      "Model": "SVM"
+    },
+    {
+      "CV_Accuracy": 0.9177,
+      "CV_F1": 0.9502,
+      "CV_F1_Std": 0.0191,
+      "CV_Precision": 0.9435,
+      "CV_Recall": 0.9577,
+      "Model": "Gradient Boosting Classifier"
+    },
+    {
+      "CV_Accuracy": 0.9208,
+      "CV_F1": 0.9523,
+      "CV_F1_Std": 0.014,
+      "CV_Precision": 0.9435,
+      "CV_Recall": 0.9615,
+      "Model": "XGBoost Classifier"
+    },
+    {
+      "CV_Accuracy": 0.9177,
+      "CV_F1": 0.9501,
+      "CV_F1_Std": 0.0118,
+      "CV_Precision": 0.9469,
+      "CV_Recall": 0.9538,
+      "Model": "CatBoost Classifier"
+    },
+    {
+      "CV_Accuracy": 0.0,
+      "CV_F1": 0.9604,
+      "CV_F1_Std": 0.0,
+      "CV_Precision": 0.0,
+      "CV_Recall": 0.0,
+      "Model": "Tuned Random Forest Classifier"
+    }
+  ],
+  "classification_holdout_comparison": [
+    {
+      "Accuracy": 0.9114,
+      "F1": 0.9481,
+      "Model": "Logistic Regression",
+      "Precision": 0.9143,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.9114,
+      "F1": 0.9466,
+      "Model": "Decision Tree Classifier",
+      "Precision": 0.9394,
+      "Recall": 0.9538
+    },
+    {
+      "Accuracy": 0.9367,
+      "F1": 0.9624,
+      "Model": "Random Forest Classifier",
+      "Precision": 0.9412,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.8861,
+      "F1": 0.9343,
+      "Model": "SVM",
+      "Precision": 0.8889,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.9494,
+      "F1": 0.9697,
+      "Model": "Gradient Boosting Classifier",
+      "Precision": 0.9552,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.9367,
+      "F1": 0.9624,
+      "Model": "XGBoost Classifier",
+      "Precision": 0.9412,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.9241,
+      "F1": 0.9552,
+      "Model": "CatBoost Classifier",
+      "Precision": 0.9275,
+      "Recall": 0.9846
+    },
+    {
+      "Accuracy": 0.9241,
+      "F1": 0.9552,
+      "Model": "Tuned Random Forest Classifier",
+      "Precision": 0.9275,
+      "Recall": 0.9846
+    }
+  ],
+  "classification_metrics": {
+    "Accuracy": 0.9241,
+    "F1": 0.9552,
+    "Precision": 0.9275,
+    "Recall": 0.9846
+  },
+  "cv_folds": 5,
+  "dataset_fallback_used": false,
+  "dataset_source": "UCI Student Performance (student-mat.csv)",
+  "dataset_status": "real_dataset",
+  "development_rows": 316,
+  "feature_columns": [
+    "gender",
+    "age",
+    "study_hours",
+    "attendance",
+    "sleep_hours",
+    "previous_grade",
+    "internet_access",
+    "parent_education",
+    "family_income",
+    "extra_classes",
+    "assignments_completed",
+    "participation",
+    "study_efficiency",
+    "homework_ratio",
+    "academic_engagement_score",
+    "sleep_quality_index",
+    "grade_trend",
+    "risk_index"
+  ],
+  "pass_threshold": 40,
+  "population_grade_median": 52.5,
+  "random_state": 42,
+  "regression_best_params": {
+    "model__max_depth": null,
+    "model__max_features": 0.8,
+    "model__min_samples_leaf": 4,
+    "model__min_samples_split": 5,
+    "model__n_estimators": 250
+  },
+  "regression_cv_comparison": [
+    {
+      "CV_MAE": 7.6258,
+      "CV_R2": 0.7811,
+      "CV_RMSE": 10.562,
+      "CV_RMSE_Std": 0.9589,
+      "Model": "Linear Regression"
+    },
+    {
+      "CV_MAE": 7.3715,
+      "CV_R2": 0.6805,
+      "CV_RMSE": 12.3966,
+      "CV_RMSE_Std": 1.5327,
+      "Model": "Decision Tree Regressor"
+    },
+    {
+      "CV_MAE": 5.7101,
+      "CV_R2": 0.847,
+      "CV_RMSE": 8.7853,
+      "CV_RMSE_Std": 0.7919,
+      "Model": "Random Forest Regressor"
+    },
+    {
+      "CV_MAE": 6.2825,
+      "CV_R2": 0.8246,
+      "CV_RMSE": 9.4605,
+      "CV_RMSE_Std": 0.5383,
+      "Model": "Gradient Boosting Regressor"
+    },
+    {
+      "CV_MAE": 6.2109,
+      "CV_R2": 0.8298,
+      "CV_RMSE": 9.2836,
+      "CV_RMSE_Std": 0.3424,
+      "Model": "XGBoost Regressor"
+    },
+    {
+      "CV_MAE": 6.0597,
+      "CV_R2": 0.8429,
+      "CV_RMSE": 8.8962,
+      "CV_RMSE_Std": 0.8574,
+      "Model": "CatBoost Regressor"
+    },
+    {
+      "CV_MAE": 0.0,
+      "CV_R2": 0.0,
+      "CV_RMSE": 8.5892,
+      "CV_RMSE_Std": 0.0,
+      "Model": "Tuned Random Forest Regressor"
+    }
+  ],
+  "regression_holdout_comparison": [
+    {
+      "MAE": 7.4967,
+      "MSE": 122.4278,
+      "Model": "Linear Regression",
+      "R2": 0.7622,
+      "RMSE": 11.0647
+    },
+    {
+      "MAE": 6.1392,
+      "MSE": 110.443,
+      "Model": "Decision Tree Regressor",
+      "R2": 0.7855,
+      "RMSE": 10.5092
+    },
+    {
+      "MAE": 5.4359,
+      "MSE": 61.7454,
+      "Model": "Random Forest Regressor",
+      "R2": 0.8801,
+      "RMSE": 7.8578
+    },
+    {
+      "MAE": 5.6486,
+      "MSE": 63.0371,
+      "Model": "Gradient Boosting Regressor",
+      "R2": 0.8776,
+      "RMSE": 7.9396
+    },
+    {
+      "MAE": 5.9499,
+      "MSE": 66.3776,
+      "Model": "XGBoost Regressor",
+      "R2": 0.8711,
+      "RMSE": 8.1472
+    },
+    {
+      "MAE": 5.6474,
+      "MSE": 70.8043,
+      "Model": "CatBoost Regressor",
+      "R2": 0.8625,
+      "RMSE": 8.4145
+    },
+    {
+      "MAE": 5.6076,
+      "MSE": 70.5675,
+      "Model": "Tuned Random Forest Regressor",
+      "R2": 0.8629,
+      "RMSE": 8.4004
+    }
+  ],
+  "regression_metrics": {
+    "MAE": 5.6076,
+    "MSE": 70.5675,
+    "R2": 0.8629,
+    "RMSE": 8.4004
+  },
+  "risk_thresholds": {
+    "high_risk_index": 45.0,
+    "high_risk_pass_prob": 0.5,
+    "high_risk_score": 45.0,
+    "moderate_risk_index": 25.0,
+    "moderate_risk_pass_prob": 0.7,
+    "moderate_risk_score": 65.0
+  },
+  "selected_classifier_model": "Tuned Random Forest Classifier",
+  "selected_regression_model": "Tuned Random Forest Regressor",
+  "selection_metric_classification": "CV_F1",
+  "selection_metric_regression": "CV_RMSE",
+  "test_rows": 79,
+  "test_size": 0.2,
+  "total_columns": 20,
+  "total_rows": 395
+}
