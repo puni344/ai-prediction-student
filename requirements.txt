@@ -22,7 +22,7 @@ pydantic-settings>=2.2.0
 python-dotenv>=1.0.1
 
 # Database & PostgreSQL Driver
-sqlalchemy>=2.0.30
+sqlalchemy==2.0.54
 psycopg2-binary>=2.9.9
 
 # Security & Authentication
