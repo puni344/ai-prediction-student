@@ -265,6 +265,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ## Author
 
-Aditya Verma
+Puneeth reddy
 
 Portfolio project for GitHub, LinkedIn, and internship applications.
