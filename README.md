@@ -1,267 +1,414 @@
-AI-Driven Student Performance Prediction and Personalized Learning Recommendation Using Machine Learning
+<div align="center">
 
-A full-stack machine-learning platform for student performance prediction, academic risk analysis, explainable predictions, personalized learning recommendations, deterministic timetable planning, and role-based academic monitoring.
+🎓 AI-Driven Student Performance Prediction & Personalized Learning
 
-1. Project Overview
+A full-stack machine-learning platform for prediction, risk analysis, explainability, personalized recommendations, deterministic timetable planning, and academic monitoring.
 
-The platform combines machine learning, deterministic decision logic, explainability, and a web application into a single academic analytics system.
+<p>
+  <a href="https://ai-prediction-student.vercel.app">
+    <img src="https://img.shields.io/badge/Live%20Application-Visit%20App-00C853?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Application">
+  </a>
+  <a href="https://student-performance-api-wsh5.onrender.com/api/docs">
+    <img src="https://img.shields.io/badge/FastAPI-API%20Docs-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API Docs">
+  </a>
+  <a href="https://github.com/puni344/ai-prediction-student">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+</p>
 
-It provides two core ML outputs:
+<p>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/FastAPI-Python-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/scikit--learn-1.7.2-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/SHAP-Explainable%20AI-8A2BE2?style=flat-square" alt="SHAP">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT License">
+</p>
 
-Regression: predicts a student's final score on a 0–100 scale.
+</div>
 
-Classification: predicts pass/fail status and pass probability.
+🌟 Project Overview
 
-The prediction layer is integrated with student profiles, historical daily snapshots, recommendations, a constrained 24-hour study planner, an AI academic advisor, faculty analytics, and an administrator portal.
+AI-Driven Student Performance Prediction and Personalized Learning Recommendation Using Machine Learning is an end-to-end academic analytics platform that combines:
 
-2. System Architecture
+🤖 Machine Learning + 🧠 Deterministic Decision Logic + 🔍 Explainable AI + 💬 AI Advisor + 📅 Timetable Planning + 🛡️ Role-Based Web Application
 
-Student / Faculty / Admin Browser
-              │
-              ▼
-      React + TypeScript + Vite
-              │
-              │ HTTPS / JSON API
-              ▼
-        FastAPI Backend
-        ┌──────┼─────────┐
-        │      │         │
-        ▼      ▼         ▼
-      ML     Rules      AI Advisor
-   Prediction Engine    Layer
-        │      │         │
-        └──────┼─────────┘
-               ▼
-        PostgreSQL Database
-               │
-               ▼
-      Persistent academic data
+The platform produces two core ML outputs:
 
-The backend owns authoritative academic numbers. The AI layer receives verified backend context and provides natural-language guidance; it does not own the prediction, risk, priority, or timetable values.
+Output
 
-3. Technology Stack
+Purpose
 
-Frontend
+📈 Regression
 
-React 19
+Predicts a student's final score on a 0–100 scale
 
-TypeScript
+✅ Classification
 
-Vite
+Predicts pass/fail status and pass probability
 
-Tailwind CSS
+These predictions are connected to student profiles, historical daily snapshots, personalized recommendations, a constrained 24-hour study planner, AI academic guidance, faculty analytics, and an administrator portal.
 
-React Router
+🔗 Quick Links
 
-Axios
+Resource
 
-Recharts
+Link
 
-Lucide React
+🌐 Live Application
 
-Backend
+ai-prediction-student.vercel.app
 
-Python
+⚡ Backend API
 
-FastAPI
+student-performance-api-wsh5.onrender.com
 
-Pydantic
+📚 Interactive API Docs
 
-SQLAlchemy
+/api/docs
 
-Uvicorn
+💻 GitHub Repository
 
-Machine Learning
+github.com/puni344/ai-prediction-student
+
+📊 UCI Student Performance Dataset
+
+UCI ML Repository
+
+🧭 System Architecture
+
+flowchart TD
+    U["👥 Student / Faculty / Admin"] --> F["⚛️ React + TypeScript + Vite"]
+    F -->|"HTTPS / JSON"| B["⚡ FastAPI Backend"]
+
+    B --> M["🤖 ML Prediction Engine"]
+    B --> R["🧮 Deterministic Rules & Planning"]
+    B --> A["💬 AI Advisor Layer"]
+
+    M --> D["🐘 PostgreSQL"]
+    R --> D
+    A --> D
+
+    D --> P["📚 Persistent Academic Data"]
+
+    style U fill:#eef2ff,stroke:#6366f1,color:#111827
+    style F fill:#e0f2fe,stroke:#0284c7,color:#111827
+    style B fill:#ecfdf5,stroke:#10b981,color:#111827
+    style M fill:#fff7ed,stroke:#f97316,color:#111827
+    style R fill:#fefce8,stroke:#eab308,color:#111827
+    style A fill:#f5f3ff,stroke:#8b5cf6,color:#111827
+    style D fill:#eff6ff,stroke:#2563eb,color:#111827
+    style P fill:#f8fafc,stroke:#64748b,color:#111827
+
+🔐 Architectural Responsibility
+
+The backend owns the authoritative academic numbers.
+
+The AI language layer receives verified backend context and provides natural-language guidance. It does not own:
+
+prediction values
+
+pass probability
+
+risk level
+
+recommendation priority
+
+recommendation duration
+
+timetable times or ordering
+
+🧩 Core Design Principle
+
+ML decides the numbers. Deterministic logic decides structured actions. AI explains and communicates.
+
+🛠️ Technology Stack
+
+🎨 Frontend
+
+Technology
+
+Role
+
+⚛️ React 19
+
+UI
+
+🔷 TypeScript
+
+Typed frontend development
+
+⚡ Vite
+
+Build tooling and dev server
+
+🎨 Tailwind CSS
+
+Styling
+
+🧭 React Router
+
+Client-side routing
+
+📡 Axios
+
+API communication
+
+📊 Recharts
+
+Data visualization
+
+✨ Lucide React
+
+Icons
+
+⚙️ Backend
+
+Technology
+
+Role
+
+🐍 Python
+
+Backend / ML ecosystem
+
+⚡ FastAPI
+
+REST API
+
+✅ Pydantic
+
+Validation and schemas
+
+🗃️ SQLAlchemy
+
+Database access
+
+🚀 Uvicorn
+
+ASGI server
+
+🤖 Machine Learning
+
+Technology
+
+Role
 
 pandas
 
+Data processing
+
 NumPy
+
+Numerical operations
 
 scikit-learn 1.7.2
 
+ML pipelines and evaluation
+
 XGBoost
+
+Benchmark model
 
 CatBoost
 
+Benchmark model
+
 SHAP
+
+TreeSHAP explainability
 
 joblib
 
-Database and Integrations
+Model persistence
 
-PostgreSQL in deployment
+🔐 Database & Integrations
 
-Google Sign-In integration
+🐘 PostgreSQL
 
-Read-only Google Calendar integration
+🔑 Google Sign-In
 
-Academic calendar integration
+📅 Read-only Google Calendar integration
 
-Cloudflare Turnstile
+🗓️ Academic calendar integration
 
-Email verification / password reset providers
+🛡️ Cloudflare Turnstile
 
-Gemini-compatible AI provider path
+✉️ Email verification / password reset
 
-4. Dataset
+💬 Gemini-compatible AI provider path
+
+📊 Dataset
 
 Source
 
-The current benchmark is trained from the UCI Student Performance dataset, using the student-mat.csv mathematics-course records.
+The current benchmark uses the UCI Student Performance dataset, specifically the student-mat.csv mathematics-course records.
 
-Verified dataset statistics stored in models/metrics.json:
+Verified Dataset Statistics
 
 Item
 
 Value
 
-Total records
+📚 Total records
 
 395
 
-Development records
+🧪 Development records
 
 316
 
-Untouched test records
+🔒 Untouched test records
 
 79
 
-Development/test split
+✂️ Development / test split
 
 80% / 20%
 
-Total standardized columns
+🧱 Total standardized columns
 
 20
 
-Model input features
+🎯 Model input features
 
 18
 
-Cross-validation folds
+🔁 Cross-validation folds
 
 5
 
-Random state
+🎲 Random state
 
 42
 
-Pass threshold
+✅ Pass threshold
 
 40 / 100
 
-Population grade median used by the saved benchmark
+📐 Saved benchmark grade median
 
 52.5
 
-The final training path uses the real UCI data strictly. The generic utility module still contains an offline synthetic-data helper for development compatibility, but src/train.py uses the strict UCI loader and prohibits synthetic fallback for the final benchmark.
+The final training path uses the real UCI dataset strictly. The generic utility layer retains an offline synthetic-data helper for development compatibility, but the final benchmark training path does not use synthetic fallback data.
 
-5. Standardized Input Schema
+🧬 Input & Feature Engineering
 
-The application standardizes the source data into these fields:
-
-User / source-derived academic and behavioural fields
+Source / Academic / Behavioural Inputs
 
 gender
-
 age
-
 study_hours
-
 attendance
-
 sleep_hours
-
 previous_grade
-
 internet_access
-
 parent_education
-
 family_income
-
 extra_classes
-
 assignments_completed
-
 participation
 
-Engineered model features
+Engineered Features
 
 study_efficiency
-
 homework_ratio
-
 academic_engagement_score
-
 sleep_quality_index
-
 grade_trend
-
 risk_index
 
 Targets
 
 final_score
-
 pass_fail
 
-The standardized schema therefore contains 18 model features plus the 2 target fields listed above.
+The standardized schema therefore contains:
 
-6. UCI Feature Mapping
+18 model features + 2 target fields = 20 standardized columns
 
-The project does not use the raw UCI columns unchanged. src/utils.py standardizes them into the application schema.
+🔄 UCI Feature Mapping
 
-Examples of the mapping include:
+The application does not pass raw UCI columns directly into the models. src/utils.py and the feature-engineering layer standardize them into the application schema.
 
-Attendance is derived from UCI absences.
+Application Field
 
-Previous grade is derived from G1 and G2.
+Source / Transformation
 
-Final score is derived from G3 and converted from the UCI 0–20 scale to 0–100.
+attendance
 
-Sleep hours is derived from the UCI health field using the project's deterministic mapping.
+Derived from UCI absences
 
-Parent education is derived from the average of mother/father education values.
+previous_grade
 
-Assignments completed is derived from failures and absences using the project's deterministic formula.
+Derived from G1 and G2
 
-Participation is derived from family relationship, free-time, and going-out variables.
+final_score
 
-Extra classes is derived from paid classes and school support fields.
+Derived from G3 and converted from 0–20 to 0–100
 
-Family income is derived from address/family-size rules in the standardization layer.
+sleep_hours
 
-These transformations are implemented in src/utils.py and the feature engineering layer.
+Derived from the UCI health field using the deterministic mapping
 
-7. Data and Modeling Methodology
+parent_education
 
-The training pipeline in src/train.py follows this sequence:
+Derived from mother/father education values
 
-Load the real UCI dataset.
+assignments_completed
 
-Standardize the raw UCI schema.
+Derived using the project's deterministic formula from failures and absences
 
-Clean invalid and duplicate records.
+participation
 
-Split the data into 80% development and 20% untouched test sets.
+Derived from family relationship, free-time, and going-out variables
 
-Fit learned preprocessing statistics only on the development data.
+extra_classes
 
-Generate engineered features.
+Derived from paid classes and school-support fields
 
-Compare multiple regression and classification model families using 5-fold cross-validation on the development set.
+family_income
 
-Tune the selected Random Forest models with RandomizedSearchCV.
+Derived using the standardization rules
 
-Evaluate the final selected models once on the untouched test set.
+🧪 Modeling Methodology
 
-Persist model, preprocessing, metrics, and comparison artifacts.
+The training pipeline follows a controlled sequence:
 
-This keeps test data separate from model-selection decisions.
+UCI Dataset
+    ↓
+Schema Standardization
+    ↓
+Data Cleaning
+    ↓
+80/20 Development-Test Split
+    ↓
+Leakage-Controlled Preprocessing
+    ↓
+Feature Engineering
+    ↓
+5-Fold Cross-Validation
+    ↓
+Model Comparison
+    ↓
+RandomizedSearchCV Tuning
+    ↓
+Untouched Test Evaluation
+    ↓
+Persisted Production Artifacts
+    ↓
+Verified Inference
 
-8. Models Evaluated
+🔒 Leakage Control
+
+Learned preprocessing statistics are fitted only on the 316-record development set before the final evaluation on the 79-record untouched test set.
+
+Model selection uses 5-fold cross-validation on development data.
+
+The untouched test set is reserved for final performance evaluation.
+
+🤖 Models Evaluated
 
 Regression
 
@@ -297,27 +444,34 @@ CatBoost Classifier
 
 Tuned Random Forest Classifier
 
-9. Production Models
+🏆 Production Models
 
-The current saved production inference artifacts are:
+The current persisted production inference artifacts are:
 
-models/regression.pkl → Tuned Random Forest Regressor
+models/regression.pkl  →  Tuned Random Forest Regressor
+models/classifier.pkl  →  Tuned Random Forest Classifier
 
-models/classifier.pkl → Tuned Random Forest Classifier
+Model Selection Criteria
 
-Model selection is recorded in models/metrics.json as:
+Task
 
-Regression selection metric: 5-fold CV RMSE
+Selection Metric
 
-Classification selection metric: 5-fold CV F1
+📈 Regression
 
-The additional Random Forest, XGBoost, and CatBoost artifacts are retained because the runtime also performs model-family comparison for the prediction/results experience.
+5-fold CV RMSE
 
-10. Verified Holdout Results
+✅ Classification
 
-The following values are recorded in models/metrics.json from the 79-record untouched test set.
+5-fold CV F1
 
-Production regression model
+Additional Random Forest, XGBoost, and CatBoost artifacts are retained because the runtime also supports model-family comparison in the prediction/results experience.
+
+📈 Verified Holdout Results
+
+The following metrics are recorded in models/metrics.json from the 79-record untouched test set.
+
+📈 Production Regression
 
 Metric
 
@@ -339,7 +493,73 @@ R²
 
 0.8629
 
-Production classification model
+Regression Benchmark Comparison
+
+Model
+
+MAE
+
+RMSE
+
+R²
+
+Linear Regression
+
+7.4967
+
+11.0647
+
+0.7622
+
+Decision Tree
+
+6.1392
+
+10.5092
+
+0.7855
+
+Random Forest
+
+5.4359
+
+7.8578
+
+0.8801
+
+Gradient Boosting
+
+5.6486
+
+7.9396
+
+0.8776
+
+XGBoost
+
+5.9499
+
+8.1472
+
+0.8711
+
+CatBoost
+
+5.6474
+
+8.4145
+
+0.8625
+
+Tuned Random Forest
+
+5.6076
+
+8.4004
+
+0.8629
+
+✅ Production Classification
 
 Metric
 
@@ -361,75 +581,7 @@ F1
 
 0.9552
 
-Holdout benchmark comparison
-
-Regression
-
-Model
-
-MAE
-
-RMSE
-
-R²
-
-Linear Regression
-
-7.4967
-
-11.0647
-
-0.7622
-
-Decision Tree Regressor
-
-6.1392
-
-10.5092
-
-0.7855
-
-Random Forest Regressor
-
-5.4359
-
-7.8578
-
-0.8801
-
-Gradient Boosting Regressor
-
-5.6486
-
-7.9396
-
-0.8776
-
-XGBoost Regressor
-
-5.9499
-
-8.1472
-
-0.8711
-
-CatBoost Regressor
-
-5.6474
-
-8.4145
-
-0.8625
-
-Tuned Random Forest Regressor
-
-5.6076
-
-8.4004
-
-0.8629
-
-Classification
+Classification Benchmark Comparison
 
 Model
 
@@ -451,7 +603,7 @@ Logistic Regression
 
 0.9481
 
-Decision Tree Classifier
+Decision Tree
 
 91.14%
 
@@ -461,7 +613,7 @@ Decision Tree Classifier
 
 0.9466
 
-Random Forest Classifier
+Random Forest
 
 93.67%
 
@@ -481,7 +633,7 @@ SVM
 
 0.9343
 
-Gradient Boosting Classifier
+Gradient Boosting
 
 94.94%
 
@@ -491,7 +643,7 @@ Gradient Boosting Classifier
 
 0.9697
 
-XGBoost Classifier
+XGBoost
 
 93.67%
 
@@ -501,7 +653,7 @@ XGBoost Classifier
 
 0.9624
 
-CatBoost Classifier
+CatBoost
 
 92.41%
 
@@ -511,7 +663,7 @@ CatBoost Classifier
 
 0.9552
 
-Tuned Random Forest Classifier
+Tuned Random Forest
 
 92.41%
 
@@ -521,25 +673,27 @@ Tuned Random Forest Classifier
 
 0.9552
 
-The production models are selected using development-set cross-validation, while the tables above report the final untouched holdout metrics. Therefore, holdout performance alone should not be used to infer the model-selection rule.
+Important: the tables above are holdout benchmark results. Production model selection is based on the specified development-set cross-validation criteria, not by simply selecting the largest holdout score.
 
-11. Explainable AI with TreeSHAP
+🔍 Explainable AI — TreeSHAP
 
 The prediction layer uses SHAP TreeExplainer for local explanations of the trained tree model.
 
-For a prediction, the system records:
+For a prediction, the system can expose:
 
-SHAP feature contributions
+🔎 SHAP feature contributions
 
-positive drivers
+➕ Positive drivers
 
-negative drivers
+➖ Negative drivers
 
-the SHAP base value
+📌 SHAP base value
 
-a mathematical consistency check
+🧮 Additive consistency check
 
-The implementation verifies the additive identity:
+Mathematical Verification
+
+The implementation verifies:
 
 base_value + sum(SHAP contributions) ≈ model prediction
 
@@ -547,65 +701,73 @@ Recorded verification example:
 
 52.131076 + 39.888924 = 92.020000
 
-The verified TreeSHAP path is used for explainability; a fallback contribution path remains in the code for environments where the TreeSHAP dependency cannot execute.
+This confirms the TreeSHAP contributions reconcile with the model prediction within numerical precision.
 
-12. Deterministic Academic Risk Engine
+🚦 Deterministic Academic Risk Engine
 
 Risk level is assigned by backend rules, not by the LLM.
 
-HIGH
+Risk
 
-risk_index >= 45.0
-OR pass_probability < 0.50
-OR predicted_score < 45.0
+Conditions
 
-MODERATE
+🔴 HIGH
 
-risk_index >= 25.0
-OR pass_probability < 0.70
-OR predicted_score < 65.0
+risk_index >= 45 OR pass_probability < 0.50 OR predicted_score < 45
 
-LOW
+🟠 MODERATE
 
-risk_index < 25.0
-AND pass_probability >= 0.70
-AND predicted_score >= 65.0
+risk_index >= 25 OR pass_probability < 0.70 OR predicted_score < 65
 
-The ML models produce the score and pass probability; the deterministic risk engine converts those values into the structured risk category.
+🟢 LOW
 
-13. Personalized Recommendation Engine
+risk_index < 25 AND pass_probability >= 0.70 AND predicted_score >= 65
 
-Recommendations are generated through a three-layer separation:
+Separation of Responsibilities
 
-ML Model
-  ↓
-predicted score / probability / SHAP contributions
-  ↓
-Deterministic Priority Engine
-  ↓
-priority / tier / duration / candidate selection
-  ↓
-AI Language Layer
-  ↓
-summary / title / reason / action
+ML Models
+   ↓
+Score + Pass Probability
+   ↓
+Deterministic Risk Engine
+   ↓
+HIGH / MODERATE / LOW
 
-Candidate focus areas include:
+The LLM does not choose the numerical risk category.
 
-attendance
+🎯 Personalized Recommendation Engine
 
-study hours
+Recommendations use a three-layer architecture:
 
-assignments completed
+🤖 ML Model
+    ↓
+Predicted Score / Probability / SHAP Contributions
+    ↓
+🧮 Deterministic Priority Engine
+    ↓
+Priority / Tier / Duration / Candidate Selection
+    ↓
+💬 AI Language Layer
+    ↓
+Summary / Title / Reason / Action
 
-sleep hours
+Candidate Focus Areas
 
-previous grade
+📅 Attendance
 
-The normalized priority formula is:
+⏱️ Study hours
+
+📝 Assignments completed
+
+😴 Sleep hours
+
+📚 Previous grade
+
+Priority Formula
 
 P = 0.35U + 0.30I + 0.25W + 0.10(100 - E)
 
-where:
+Where:
 
 U = urgency
 
@@ -615,89 +777,107 @@ W = weakness
 
 E = effort
 
-Priority tiers are deterministic:
+Deterministic Priority Tiers
 
-Composite score
+Composite Score
 
 Tier
 
-Default duration
+Default Duration
 
 >= 70
 
-High
+🔴 High
 
-45 minutes
+45 min
 
 45 to <70
 
-Medium
+🟠 Medium
 
-30 minutes
+30 min
 
 <45
 
-Low
+🟢 Low
 
-20 minutes
+20 min
 
 The LLM does not own these numerical fields.
 
-14. Deterministic 24-Hour Timetable Planner
+🗓️ Deterministic 24-Hour Timetable Planner
 
-The timetable engine treats a day as exactly:
+The planner treats a day as exactly:
 
 24 hours = 1440 minutes
 
 It accounts for:
 
-college hours
+🏫 College hours
 
-breakfast / lunch / dinner
+🍳 Breakfast / lunch / dinner
 
-fixed or flexible sleep constraints
+😴 Sleep constraints
 
-Google Calendar busy intervals
+📅 Google Calendar busy intervals
 
-study blocks
+📚 Study blocks
 
-recovery breaks
+☕ Recovery breaks
 
-holidays and day status
+🗓️ Holidays and day status
+
+Core Invariant
+
+allocated_minutes + remaining_minutes = 1440
 
 The planner uses interval-union logic so overlapping constraints are not double-counted.
 
-Core invariant:
+It also handles schedules crossing midnight and rejects infeasible hard-constraint combinations with explicit validation information.
 
-allocated minutes + remaining minutes = 1440
+The study planner is deterministic. The AI advisor explains the generated plan but does not change its times, durations, or ordering.
 
-The implementation also handles schedules crossing midnight and rejects hard constraint conflicts or infeasible requests with explicit validation information.
-
-The study planner is deterministic; the AI advisor only explains a generated schedule and does not modify its times, durations, or ordering.
-
-15. Daily Official Prediction Snapshots
+📅 Daily Official Prediction Snapshots
 
 The system maintains an official daily prediction snapshot for each student.
 
-Official snapshot time: 09:00 Asia/Kolkata
+Rule
 
-One snapshot per student per day
+Value
 
-Unique database constraint on (student_id, snapshot_date) prevents duplicates
+🕘 Official snapshot time
 
-Existing snapshots are returned unchanged
+09:00 Asia/Kolkata
 
-The next day's snapshot uses the latest persisted student profile
+📌 Snapshots per student/day
 
-Historical trends aggregate stored snapshots instead of inventing additional predictions
+1
 
-What-if simulations remain separate from official daily snapshots
+🔐 Duplicate protection
 
-Student profile changes are persisted immediately, but they do not rewrite an existing official daily snapshot.
+Unique (student_id, snapshot_date) constraint
 
-16. Student, Faculty, and Admin Portals
+🧾 Historical data
 
-Student portal
+Stored snapshots
+
+🔄 Profile update
+
+Persisted immediately
+
+📆 Next snapshot
+
+Uses latest persisted profile
+
+🧪 What-if simulation
+
+Separate from official snapshots
+
+Existing official snapshots are not rewritten when a student edits their profile.
+
+👥 Role-Based Academic Portals
+
+🎓 Student Portal
 
 Includes:
 
@@ -727,7 +907,7 @@ Complete-profile flow
 
 Academic calendar integration
 
-Faculty portal
+👨‍🏫 Faculty Portal
 
 Includes:
 
@@ -745,7 +925,7 @@ Risk monitor
 
 Faculty settings
 
-Admin portal
+🛠️ Admin Portal
 
 Includes:
 
@@ -759,143 +939,176 @@ Academic calendar management
 
 Department catalogue access
 
-The current application catalogue contains 18 programs and the source constant defines 27 canonical departments.
+Current application catalogue:
 
-17. Authentication and Security Controls
+18 programs
+
+27 canonical departments
+
+🔐 Authentication & Security Controls
 
 The implemented security layer includes:
 
-JWT bearer authentication
+Control
 
-HS256 token signing
+Implementation
 
-bcrypt password hashing
+🔑 Authentication
 
-Password-strength validation
+JWT Bearer
 
-Role-based authorization for student, faculty, and admin users
+🔐 Password hashing
 
-Protected frontend routes
+bcrypt
 
-Backend ownership checks for student data
+👥 Authorization
 
-Pydantic request/response validation
+Student / Faculty / Admin roles
 
-Cloudflare Turnstile verification
+🧱 Route protection
 
-Email verification
+Frontend protected routes
 
-6-digit OTP verification
+🛡️ Ownership isolation
 
-OTP validity of 5 minutes
+Backend checks
 
-Maximum 5 OTP verification attempts
+✅ Validation
 
-OTP resend cooldown of 60 seconds
+Pydantic
 
-In-memory request/rate-limit protection
+🤖 CAPTCHA
+
+Cloudflare Turnstile
+
+✉️ OTP
+
+6 digits
+
+⏳ OTP validity
+
+5 minutes
+
+🚫 OTP attempts
+
+Maximum 5
+
+🔄 OTP resend
+
+60-second cooldown
+
+🚦 Request protection
+
+In-memory rate-limit controls
+
+🔒 Transport
 
 HTTPS in deployed environments
 
-Server-side storage of provider credentials and API keys
+🔑 Provider secrets
 
-The current source configuration defaults the JWT access-token lifetime to 24 hours; deployed environments can override settings through environment variables.
+Server-side environment variables
+
+JWT signing uses HS256.
+
+The source configuration defaults the JWT access-token lifetime to 24 hours; deployed environments may override this through environment variables.
 
 No claim of absolute security or formal penetration-test certification is made.
 
-18. AI Advisor
+🤖 AI Academic Advisor
 
-The AI advisor is intentionally separated from authoritative ML and scheduling logic.
+The AI advisor is intentionally separated from authoritative prediction and scheduling logic.
 
-Authoritative layer
-
-Owns:
+Authoritative Layer Owns
 
 predicted score
-
 pass probability
-
 pass/fail
-
 confidence
-
 risk level
-
 risk index
-
 SHAP values
-
 recommendation priority
-
 recommendation duration
-
 timetable start/end times
-
 timetable ordering
 
-AI language layer
-
-Provides:
+AI Language Layer Provides
 
 explanations
-
 recommendation wording
-
 concise summaries
-
 conversational academic guidance
-
 explanation of deterministic study plans
 
-The repository contains a provider abstraction with:
+The repository contains an AI provider abstraction with:
 
 AIInferenceClient
 
-development/mock client
+Development/mock client
 
-live Gemini-compatible client
+Live Gemini-compatible client
 
-A recorded Phase 5 verification report documents successful live gemini-2.5-flash execution, grounded recommendation generation, chat responses, prompt-injection resistance checks, missing-data behaviour, and deterministic fallback handling.
+A recorded Phase 5 verification report documents a successful live Gemini execution together with grounded recommendation generation, chat responses, prompt-injection resistance checks, missing-data behaviour, and deterministic fallback handling.
 
-19. Calendar Integrations
+📅 Calendar Integrations
 
-The application supports an academic calendar resolution layer and student calendar constraints.
+The application supports:
 
-The Google Calendar integration uses a read-only calendar scope and is used to retrieve busy periods for timetable planning. It does not create, update, or delete Google Calendar events.
+Google Calendar
 
-The academic calendar layer also supports institution and student overrides and regional calendar data.
+A read-only calendar scope is used to retrieve busy periods for timetable planning.
 
-20. Backend API Surface
+The application does not create, update, or delete Google Calendar events.
+
+Academic Calendar
+
+The academic-calendar layer supports:
+
+Institution rules
+
+Student overrides
+
+Regional calendar data
+
+Holiday resolution
+
+Day status
+
+⚡ Backend API
 
 The FastAPI application exposes route groups for:
 
-Authentication
+🔐 Authentication
 
-Student profiles and catalogues
+👤 Student profiles and catalogues
 
-Predictions and historical snapshots
+📈 Predictions and historical snapshots
 
-Faculty dashboards and analytics
+👨‍🏫 Faculty dashboards and analytics
 
-Recommendations
+🎯 Recommendations
 
-AI advisor chat
+💬 AI advisor chat
 
-Timetable generation / validation
+🗓️ Timetable generation / validation
 
-Academic calendar operations
+📅 Academic calendar operations
 
-Administrator operations
+🛠️ Administrator operations
 
-Health/readiness probes
+❤️ Health/readiness probes
 
-System clock and configuration diagnostics
+🕒 System clock and configuration diagnostics
 
-Interactive API documentation is available from FastAPI at /api/docs in a running deployment.
+📚 Interactive API Documentation
 
-21. Repository Structure
+Open FastAPI /api/docs
 
-.
+📁 Repository Structure
+
+ai-prediction-student/
+│
 ├── backend/
 │   ├── ai/
 │   ├── constants/
@@ -903,14 +1116,18 @@ Interactive API documentation is available from FastAPI at /api/docs in a runnin
 │   ├── routers/
 │   ├── schemas/
 │   └── services/
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
+│
 ├── docs/
 │   └── AI_ARCHITECTURE.md
+│
 ├── frontend/
 │   ├── public/
 │   └── src/
+│
 ├── models/
 │   ├── regression.pkl
 │   ├── classifier.pkl
@@ -923,23 +1140,29 @@ Interactive API documentation is available from FastAPI at /api/docs in a runnin
 │   ├── preprocessor.pkl
 │   ├── encoders_scaler.pkl
 │   └── metrics.json
+│
 ├── reports/
 │   └── figures/
+│
 ├── screenshots/
+│   └── result.png
+│
 ├── src/
 │   ├── feature_engineering.py
 │   ├── predict.py
 │   ├── preprocessing.py
 │   ├── train.py
 │   └── utils.py
+│
 ├── tests/
+│
 ├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
 ├── requirements.txt
 └── README.md
 
-22. Important Model Artifacts
+📦 Important Model Artifacts
 
 Artifact
 
@@ -989,142 +1212,210 @@ models/metrics.json
 
 Dataset metadata, model selection, metrics and thresholds
 
-23. Local Setup
+🖼️ Application Preview
 
-Backend
+<p align="center">
+  <img src="screenshots/result.png" alt="Prediction result screen" width="900">
+</p>
 
-Create and activate a Python virtual environment, then install dependencies:
+🚀 Local Setup
+
+1. Backend
+
+Create a Python virtual environment:
 
 python -m venv .venv
 
-Windows PowerShell:
+Windows PowerShell
 
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
-Linux/macOS:
+Linux / macOS
 
 source .venv/bin/activate
 pip install -r requirements.txt
 
-Configure the environment variables required by the deployment mode, especially:
+Environment Variables
+
+Configure the variables required for the selected deployment mode, including:
 
 DATABASE_URL
 SECRET_KEY
 APP_ENV
 CORS_ORIGINS
+
 AI_PROVIDER
 AI_MODEL
 AI_API_KEY
 AI_BASE_URL
+
 EMAIL_PROVIDER
 BREVO_API_KEY / SMTP settings
+
 TURNSTILE settings
-GOOGLE OAuth settings (when enabled)
-CALENDARIFIC settings (when enabled)
+GOOGLE OAuth settings
+CALENDARIFIC settings
 
-Never commit .env, provider credentials, JWT secrets, database passwords, or API keys.
+⚠️ Never commit .env, database passwords, API keys, JWT secrets, or provider credentials.
 
-Run the backend:
+Run Backend
 
 uvicorn backend.main:app --reload
 
-Frontend
+2. Frontend
 
 cd frontend
 npm install
 npm run dev
 
-The frontend reads the API base URL from VITE_API_URL.
+The frontend reads its backend API base URL from:
 
-24. Training
+VITE_API_URL
 
-The current strict training pipeline can be run with:
+🧠 Training
+
+The strict training pipeline can be executed with:
 
 python -m src.train
 
-It downloads/loads the real UCI Student Performance dataset, performs the leakage-controlled development/test split, performs cross-validation and tuning, evaluates the untouched holdout set, and writes the model/metric/comparison artifacts under models/ and reports/figures/.
+The training pipeline:
 
-25. Testing and Verification Evidence
+Loads the real UCI Student Performance dataset.
 
-The repository contains regression/security/integration tests covering areas such as:
+Standardizes the raw UCI schema.
 
-authentication and role isolation
+Cleans the data.
 
-student profile constraints
+Creates the development/test split.
 
-prediction flow and provenance
+Fits preprocessing on development data.
 
-result loading
+Performs feature engineering.
 
-timetable constraints and 24-hour invariants
+Runs 5-fold cross-validation.
 
-email/OTP lifecycle
+Performs model comparison.
+
+Tunes Random Forest models with RandomizedSearchCV.
+
+Evaluates on the untouched test set.
+
+Writes model, metric, and comparison artifacts.
+
+🧪 Testing & Verification Evidence
+
+The repository contains tests covering areas such as:
+
+Authentication and role isolation
+
+Student profile constraints
+
+Prediction flow and provenance
+
+Result loading
+
+Timetable constraints and 24-hour invariants
+
+Email / OTP lifecycle
 
 Turnstile lifecycle
 
-academic-calendar integration
+Academic-calendar integration
 
-faculty/admin portal behaviour
+Faculty / admin portal behaviour
 
-A recorded Phase 5 runtime verification report included in the repository documents a previous run with 21 passed tests and 0 failures plus a successful frontend production build. That report is historical evidence of the verification run; exact results depend on the environment and configuration used for the current checkout.
+A recorded Phase 5 runtime verification report documents a previous run with:
 
-26. Deployment
+✅ 21 passed tests
+❌ 0 failures
+✅ Successful frontend production build
+
+That report is historical verification evidence for the documented run. Exact results can depend on the environment and configuration of the current checkout.
+
+☁️ Deployment
 
 The deployed architecture is:
 
-Vercel
-  React frontend
-      │
-      ▼
-Render
-  FastAPI backend
-      │
-      ▼
-Render PostgreSQL
+🌐 Vercel
+React + TypeScript Frontend
+        │
+        ▼
+⚡ Render
+FastAPI Backend
+        │
+        ▼
+🐘 Render PostgreSQL
 
-Known production endpoints:
+Production Links
 
-Frontend: https://ai-prediction-student.vercel.app
+Frontend:
+https://ai-prediction-student.vercel.app
 
-Backend: https://student-performance-api-wsh5.onrender.com
+Backend:
+https://student-performance-api-wsh5.onrender.com
 
-API docs: https://student-performance-api-wsh5.onrender.com/api/docs
+API Docs:
+https://student-performance-api-wsh5.onrender.com/api/docs
 
-Production backend start command:
+Production Backend Start Command
 
 uvicorn backend.main:app --host 0.0.0.0 --port $PORT
 
-Production frontend API configuration:
+Production Frontend API Configuration
 
 VITE_API_URL=https://student-performance-api-wsh5.onrender.com/api
 
-27. Design Principle
+📌 Current Scope & Limitations
 
-The core architectural rule is:
+The benchmark contains 395 records from the UCI mathematics-course dataset.
 
-ML decides the numbers. Deterministic logic decides structured actions. AI explains and communicates.
+The dataset is not a universal representation of every institution or curriculum.
 
-This separation keeps prediction outputs, risk classifications, recommendation priorities, and timetable constraints authoritative and reproducible.
+Several application variables are derived from UCI source fields through deterministic transformations.
 
-28. Limitations
+The current application predicts overall academic performance rather than subject-specific performance from a multi-subject institutional dataset.
 
-The benchmark dataset contains 395 records from the UCI mathematics-course dataset; it is not a universal representation of every institution or curriculum.
-
-Several application-level variables are standardized/derived from UCI source fields rather than being directly measured in the raw dataset.
-
-The current application predicts overall academic performance; it does not provide subject-level prediction from a multi-subject institutional dataset.
-
-A formal large-scale concurrency/load-capacity benchmark is not included in the repository.
+A formal large-scale concurrency/load-capacity benchmark is not included.
 
 No claim of formal penetration-test certification or absolute security is made.
 
 The live AI provider is an external dependency; deterministic fallback behaviour remains available when the live provider is unavailable.
 
-29. License
+🔮 Future Improvements
 
-MIT License. See LICENSE.
+📈 Model and prediction drift monitoring
 
-30. Author
+🏫 Larger institution-specific datasets
+
+📚 Multi-subject academic prediction
+
+⚙️ Automated CI/CD quality gates
+
+🧪 Expanded integration and load testing
+
+🤖 Further explainability and model monitoring
+
+👨‍💻 Author
 
 Puneeth Reddy
+
+Built as a full-stack academic machine-learning project combining predictive analytics, explainability, deterministic academic planning, and AI-assisted guidance.
+
+📄 License
+
+This project is licensed under the MIT License.
+
+See LICENSE for details.
+
+<div align="center">
+
+⭐ AI + ML + Explainability + Personalized Learning
+
+Predict → Explain → Assess Risk → Recommend → Plan → Guide
+
+<a href="https://ai-prediction-student.vercel.app">
+  <img src="https://img.shields.io/badge/🚀%20Open%20Live%20Project-Visit%20Application-6C63FF?style=for-the-badge" alt="Open Live Project">
+</a>
+
+</div>
